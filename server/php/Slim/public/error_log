@@ -1,0 +1,40 @@
+[12-May-2021 17:53:01 UTC] PHP Warning:  fopen(/home/a6lpqnd4gig8/public_html/subapps/saloon/tmp/cache/site_url_for_shell.php): failed to open stream: No such file or directory in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 35
+[12-May-2021 17:53:01 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 36
+[12-May-2021 17:53:01 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 37
+[12-May-2021 17:53:01 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 38
+[12-May-2021 17:53:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php(68): PDO->__construct('mysql:host=loca...', 'root', 'Vijay@54321', Array)
+#1 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php(44): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'root', 'Vijay@54321', Array)
+#2 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/ConnectionFactory.php(183): I in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connection.php on line 647
+[12-May-2021 17:53:01 UTC] PHP Warning:  fopen(/home/a6lpqnd4gig8/public_html/subapps/saloon/tmp/cache/site_url_for_shell.php): failed to open stream: No such file or directory in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 35
+[12-May-2021 17:53:01 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 36
+[12-May-2021 17:53:01 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 37
+[12-May-2021 17:53:01 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 38
+[12-May-2021 17:53:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php(68): PDO->__construct('mysql:host=loca...', 'root', 'Vijay@54321', Array)
+#1 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php(44): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'root', 'Vijay@54321', Array)
+#2 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/ConnectionFactory.php(183): I in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connection.php on line 647
+[12-May-2021 17:53:16 UTC] PHP Warning:  fopen(/home/a6lpqnd4gig8/public_html/subapps/saloon/tmp/cache/site_url_for_shell.php): failed to open stream: No such file or directory in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 35
+[12-May-2021 17:53:16 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 36
+[12-May-2021 17:53:16 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 37
+[12-May-2021 17:53:16 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 38
+[12-May-2021 17:53:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php(68): PDO->__construct('mysql:host=loca...', 'root', 'Vijay@54321', Array)
+#1 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php(44): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'root', 'Vijay@54321', Array)
+#2 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/ConnectionFactory.php(183): I in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connection.php on line 647
+[16-May-2021 11:02:57 UTC] PHP Warning:  fopen(/home/a6lpqnd4gig8/public_html/subapps/saloon/tmp/cache/site_url_for_shell.php): failed to open stream: No such file or directory in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 35
+[16-May-2021 11:02:57 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 36
+[16-May-2021 11:02:57 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 37
+[16-May-2021 11:02:57 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/config.inc.php on line 38
+[16-May-2021 11:02:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php(68): PDO->__construct('mysql:host=loca...', 'root', 'Vijay@54321', Array)
+#1 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/Connector.php(44): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'root', 'Vijay@54321', Array)
+#2 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connectors/ConnectionFactory.php(183): I in /home/a6lpqnd4gig8/public_html/subapps/saloon/server/php/Slim/vendor/illuminate/database/Connection.php on line 647

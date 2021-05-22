@@ -1,0 +1,65 @@
+<div [@routerTransition]>
+   <div class="container-fluid mt-30">
+      <div class="row" *ngIf="restaurants && restaurants.length > 0">
+         <div class="col-sm-12 col-md-12">
+            Restaurants : <select style="width:250px; height:50px;">
+                  <option *ngFor="let restaurant of restaurants" [value]="restaurant.id" [selected]="restaurant.id == restaurant_id">{{restaurant.title}}</option>
+            </select>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-2 col-md-1">
+            Days
+         </div>
+
+         <div class="col-sm-3 col-md-1">
+            <div class="inline-show v-mid">
+               <label for="holiday" class="mb-0"> Holiday
+               </label>
+            </div>
+         </div>
+
+         <div class="col-sm-7 col-md-10 text-center">
+            <div class="inline-show v-mid">
+               <label for="timeslot" class="mb-0"> TimeSlot
+               </label>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="clearfix mb-20 pt-10">
+      <table class="table" *ngIf="schedules.length > 0">
+         <tbody>
+            <tr *ngFor="let schedule of schedules">
+               <td>
+                  {{schedule.day}}
+               </td>
+               <td>
+                  <input type="checkbox" (click)="updateSchedule(schedule)" id="{{schedule.day}}"
+                     [checked]="(schedule.type === 1)">
+                  <label for="{{schedule.day}}" class="mb-0"></label>
+               </td>
+               <td>
+                  <div class="clsTimeSlot" *ngIf="schedule.type === 0">
+                     <span *ngFor="let timeSlot of schedule.timeSlots">
+                        <select style="width:50px" [(ngModel)]="timeSlot.slot"
+                           [ngModelOptions]="{standalone: true}"
+                           (change)="updatetimeSlot(timeSlot, $event)">
+                           <option *ngFor="let discount of discounts" [value]="discount" [selected]="discount == timeSlot.slot">{{discount}}<span *ngIf="discount">%</span><span *ngIf="!discount">None</span></option>
+                     </select><br>{{timeSlot.time}}
+                     </span>
+                  </div>
+                  <div class="clsTimeSlot" *ngIf="schedule.type === 1">
+                     Holiday
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+
+   <div class="clearfix text-right mb-20">
+      <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+   </div>
+</div>

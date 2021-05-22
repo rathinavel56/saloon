@@ -1,0 +1,20 @@
+{
+    "/api/*": {
+        "target": "http://saloon.dlighttech.in",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/images/original/*": {
+        "target": "http://saloon.dlighttech.in",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/images/static/*": {
+        "target": "http://saloon.dlighttech.in",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

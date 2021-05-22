@@ -1,0 +1,72 @@
+<div class="pt-15 clearfix" *ngIf="menu">
+    <div class="row" *ngIf="(menu.add && menu.add.fields && menu.add.fields.length > 0) || menu.delete">
+        <div class="col-sm-12 clsProgress_tab mb-20">
+            <ul class="nav nav-tabs justify-content-end" role="tablist">
+                <li>
+                    <div class="input-group">
+                        <input type="text" class="form-control" style="height:45px;" [(ngModel)]="search"
+                            [ngModelOptions]="{standalone: true}">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-info" type="button"
+                                (click)="getFilterRecords()" data-toggle="tooltip" data-placement="bottom"
+                                title="Search">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item" *ngIf="menu.add && menu.add.fields && menu.add.fields.length > 0">
+                    <a class="nav-link" href="javascript:void(0)" style="background: #F4633A;
+                    color: #fff;" (click)="redirect('add')" id="addId" aria-controls="addId" role="tab" data-toggle="tab" aria-selected="false">Add {{menu.title}}</a>
+                </li>
+                <li class="nav-item" *ngIf="menu.delete">
+                    <a class="nav-link" href="javascript:void(0)" style="background: #F4633A;
+                    color: #fff;" (click)="redirect('delete')" id="deleteId" aria-controls="deleteId" role="tab" data-toggle="tab" aria-selected="false">Delete {{menu.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-responsive clsDashTable mb-30">
+        <table class="table mb-20">
+            <thead class="">
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center" *ngFor="let item of menu.listview.fields">{{item.label}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let element of responseData; let indexCrud = index">
+                    <td>{{indexCrud + 1}}</td>
+                    <td class="text-center" *ngFor="let elementChild of menu.listview.fields">
+                        <span *ngIf="!elementChild.listActions">
+                     <span *ngIf="elementChild['label'] === 'From User'">
+                        <span *ngIf="element.parent_user_id === 0">{{element.other_user.first_name}}
+                           {{element.other_user.last_name}}</span>
+                        <span *ngIf="element.parent_user_id !== 0">{{element.parent_user.first_name}}
+                           {{element.parent_user.last_name}}</span>
+                        </span>
+                        <span *ngIf="elementChild['label'] !== 'From User'">{{elementChild['prefix']}}{{getValue(elementChild['name'],
+                        element)}}</span>
+                        </span>
+                        <span *ngIf="elementChild.listActions" class="clsAction inline-show clsMinWidth-100">
+                     <ul class="clearfix unstyled">
+                        <li *ngFor="let button of elementChild.listActions">
+                           <a href="javascript:void(0)" (click)="action(element, button.label)"
+                              class="{{button.class}}" data-toggle="modal">
+                              <i class="{{button.icon}}"></i>
+                           </a>
+                        </li>
+                     </ul>
+                  </span>
+                    </td>
+                </tr>
+                <tr *ngIf="responseData && responseData.length === 0">
+                    <td colspan="{{menu.listview.fields.length + 1}}">No Records</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="clearfix pagination justify-content-center" *ngIf="metaData && metaData.last_page > 1">
+        <ngb-pagination [collectionSize]="metaData.total" [pageSize]="metaData.per_page" [(page)]="metaData.current_page" [maxSize]="7" [rotate]="true" [ellipses]="false" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+    </div>
+</div>
